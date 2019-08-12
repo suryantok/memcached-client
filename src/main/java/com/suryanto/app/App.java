@@ -15,7 +15,7 @@ public class App {
         localMemcached = Boolean.parseBoolean( args[0]);        
       }
       
-      MemcachedClient mcc = new MemcachedClient(new InetSocketAddress("127.0.0.1", 11211));
+      MemcachedClient mcc = null;
       if (localMemcached) {
         System.out.println("connect to local");
         mcc = new MemcachedClient(new InetSocketAddress("127.0.0.1", 11211));        
